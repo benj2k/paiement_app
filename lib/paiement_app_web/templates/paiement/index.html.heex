@@ -1,0 +1,9 @@
+<section class="phx-hero">
+  <h1>Paiement page</h1>
+  <p>Peace of mind from prototype to production</p>
+
+  <%= form_for @conn, Routes.paiement_path(@conn, :index), [as: :confirm], fn f -> %>
+    <%= text_input f, :tx_hash %>
+    <%= submit "Validate paiement" %>
+  <% end %>
+</section>
